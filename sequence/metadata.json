@@ -1,0 +1,130 @@
+{
+  "seed": 42,
+  "data": {
+    "smiles_file": "/content/SMILES.csv",
+    "n_bg": 3528,
+    "n_ms": 12,
+    "ms_names": [
+      "GLP-1(7-36)",
+      "GIP(1-42)",
+      "Glucagon(1-29)",
+      "Exenatide",
+      "Lixisenatide",
+      "Liraglutide",
+      "Albiglutide",
+      "Taspoglutide",
+      "Dulaglutide",
+      "Semaglutide",
+      "Tirzepatide",
+      "Retatrutide"
+    ]
+  },
+  "tokenizer": {
+    "token_type": "SMILES_CHAR",
+    "pad": "<PAD>",
+    "sos": "<SOS>",
+    "eos": "<EOS>",
+    "unk": null,
+    "vocab": [
+      "<PAD>",
+      "<SOS>",
+      "<EOS>",
+      "#",
+      "(",
+      ")",
+      "+",
+      "-",
+      ".",
+      "/",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "=",
+      "@",
+      "B",
+      "C",
+      "F",
+      "H",
+      "I",
+      "N",
+      "O",
+      "P",
+      "S",
+      "[",
+      "\\",
+      "]",
+      "a",
+      "c",
+      "i",
+      "l",
+      "n",
+      "o",
+      "r",
+      "s"
+    ],
+    "max_len": 841,
+    "vocab_size": 40,
+    "pad_idx": 0,
+    "sos_idx": 1,
+    "eos_idx": 2,
+    "unk_idx": null
+  },
+  "fingerprint": {
+    "n_bits": 1024,
+    "radius": 2
+  },
+  "condition": {
+    "cond_labels": {
+      "GLP-1": 0,
+      "GCGR": 1,
+      "GIP": 2
+    },
+    "n_cond": 3,
+    "ms_cond_vec": {},
+    "ms_receptor": {
+      "GLP-1(7-36)": 0,
+      "Exenatide": 0,
+      "Lixisenatide": 0,
+      "Liraglutide": 0,
+      "Albiglutide": 0,
+      "Taspoglutide": 0,
+      "Dulaglutide": 0,
+      "Semaglutide": 0,
+      "Tirzepatide": 0,
+      "Retatrutide": 0,
+      "Glucagon(1-29)": 1,
+      "GIP(1-42)": 2
+    }
+  },
+  "model": {
+    "emb_dim": 32,
+    "cond_dim": 16,
+    "gru_dim": 128,
+    "latent_dim": 64,
+    "dropout": 0.1,
+    "dec_gru_dim": 512,
+    "dec_n_layers": 1
+  },
+  "loss": {
+    "beta": 2.0,
+    "lambda_ce": null,
+    "lambda_fp": null,
+    "free_bits_per_dim": 0.01,
+    "word_dropout": null
+  },
+  "training": {
+    "epochs": 150,
+    "lr": 0.0003,
+    "batch": 64,
+    "optimizer": "AdamW"
+  },
+  "checkpoint": {
+    "last": "/content/smiles/cvae_last.pt",
+    "best_evod": "/content/smiles/cvae_best_evod.pt"
+  }
+}

@@ -1,0 +1,7 @@
+GLP1R,GIPR,GCGR,condition,count,mean_identity_percent,std_identity_percent,exact_match_rate_percent,mean_length_diff
+0,0,1,001,15,88.97,6.0,0.0,0.0
+0,1,0,010,17,93.7,4.9,0.0,0.0
+1,0,0,100,33,88.2,9.97,0.0,0.06
+1,0,1,101,26,84.01,22.22,0.0,1.38
+1,1,0,110,4,91.67,4.85,0.0,0.0
+1,1,1,111,2,93.59,1.81,0.0,0.0
