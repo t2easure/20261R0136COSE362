@@ -3,5 +3,13 @@ __pycache__/
 *.pyc
 *.pt
 *.pth
+!sequence/sequence_cvae_checkpoint.pt
+!sequence/cvae_last.pt
+!sequence/optimized_sequence_cvae.pt
+!smiles/cvae_gru_best_evod.pt
+!smiles/cvae_gru_last.pt
+!smiles/checkpoints/
+smiles/checkpoints/*.pt
+!smiles/checkpoints/cvae_gru_ep0500.pt
 .ipynb_checkpoints/
 .DS_Store
